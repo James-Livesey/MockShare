@@ -137,6 +137,7 @@ hr {
 .objectStyleOptions {
     margin-top: 10px;
     margin-bottom: 10px;
+    line-height: 35px;
 }
 
 /* jQuery UI overrides */
