@@ -1,4 +1,4 @@
-const UNLISTED_STYLE_KEYS = ["outline", "top", "left", "bottom", "right", "width", "height"];
+const UNLISTED_STYLE_KEYS = ["outline", "position", "top", "left", "bottom", "right", "width", "height"];
 
 var focussedObject = null;
 
