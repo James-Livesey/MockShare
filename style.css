@@ -1,0 +1,57 @@
+:root {
+    --background: #032d69;
+    --foreground: white;
+    --shade1: #1c4587;
+    --shade2: #1155cc;
+    --shade3: #3c78d8ff;
+}
+
+* {
+    font-family: "Overpass", sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    margin: 0;
+    background-color: var(--background);
+    color: var(--foreground);
+}
+
+header, footer {
+    height: 30px;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: var(--shade1);
+}
+
+main {
+    position: relative;
+    height: calc(100vh - 60px);
+}
+
+main .pane {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 300px;
+    height: 100%;
+    border-right: 5px solid var(--shade2);
+}
+
+main .workspace {
+    position: relative;
+    top: 0;
+    left: 300px;
+    width: calc(100% - 300px);
+    height: 100%;
+    background: repeating-conic-gradient(var(--shade1) 0% 25%, transparent 0% 50%) 50% / 20px 20px;
+    overflow: auto;
+}
+
+/* jQuery UI overrides */
+
+.ui-resizable-se {
+    background-image: none;
+}
