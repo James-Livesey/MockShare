@@ -28,9 +28,15 @@ function getObjectStyles(element) {
     for (var i = 0; i < styleString.length; i++) {
         if (styleString[i] == "\"") {
             inString = !inString;
-        } else if (styleString[i] == ":") {
+
+            if (!inValue) {
+                currentKey += "\"";
+            } else {
+                currentValue += "\"";
+            }
+        } else if (styleString[i] == ":" && !inString) {
             inValue = true;
-        } else if (styleString[i] == ";") {
+        } else if (styleString[i] == ";" && !inString) {
             if (!UNLISTED_STYLE_KEYS.includes(currentKey.trim())) {
                 styleObject[currentKey.trim()] = currentValue.trim();
             }
